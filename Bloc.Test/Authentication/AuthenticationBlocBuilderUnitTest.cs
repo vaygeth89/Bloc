@@ -21,7 +21,7 @@ public class AuthenticationBlocBuilderUnitTest
 
     [Fact]
     //authenticate
-    public void Authenticate_ValidCredentials()
+    public void Authenticate_UsingValidCredentials()
     {
         _authenticationBuilder.Bloc.Login("admin", "password");
     }
