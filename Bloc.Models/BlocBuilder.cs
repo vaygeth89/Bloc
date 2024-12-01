@@ -1,9 +1,9 @@
 namespace Bloc.Models;
 
-public class BlocBuilder<TBloc, TState> where TBloc : BlocBase<TState> where TState : BlocState
+public class BlocBuilder<TBloc, TState> where TBloc : BlocBase<TState> where TState : class
 {
     public TBloc Bloc { get; }
-    public TState State { get; internal set; }
+    public TState State => Bloc.State;
 
     public BlocBuilder(TBloc bloc)
     {
@@ -14,6 +14,6 @@ public class BlocBuilder<TBloc, TState> where TBloc : BlocBase<TState> where TSt
 
     private void UpdateState(TState state)
     {
-        State = state;
+        Bloc.State = state;
     }
 }

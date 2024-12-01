@@ -1,3 +1,3 @@
 namespace Bloc.Models;
 
-public abstract record BlocState();
+// public abstract record BlocState();
